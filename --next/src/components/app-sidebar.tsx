@@ -8,9 +8,11 @@ import {
   Command,
   Frame,
   GalleryVerticalEnd,
+  Ghost,
   Map,
   PieChart,
   Settings2,
+  SpoolIcon,
   SquareTerminal,
 } from "lucide-react"
 
@@ -29,28 +31,48 @@ import {
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
+    name: "Alpha",
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
       name: `Nemi AI ®️`,
-      logo: GalleryVerticalEnd,
+      logo: Ghost,
       plan: "Enterprise",
+      // list: Ghost,
     },
-    // {
-    //   name: "Acme Corp.",
-    //   logo: AudioWaveform,
-    //   plan: "Startup",
-    // },
-    // {
-    //   name: "Evil Corp.",
-    //   logo: Command,
-    //   plan: "Free",
-    // },
+    {
+      name: "Acme Corp.",
+      logo: AudioWaveform,
+      plan: "Startup",
+    },
+    {
+      name: "Evil Corp.",
+      logo: Command,
+      plan: "Free",
+    },
   ],
   navMain: [
+    {
+      title: "Models",
+      url: "#",
+      icon: SpoolIcon,
+      items: [
+        {
+          title: "Nemi-brobot",
+          url: "#",
+        },
+        // {
+        //   title: "Explorer",
+        //   url: "#",
+        // },
+        // {
+        //   title: "Quantum",
+        //   url: "#",
+        // },
+      ],
+    },
     {
       title: "Playground",
       url: "#",
@@ -67,25 +89,6 @@ const data = {
         },
         {
           title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
           url: "#",
         },
       ],
